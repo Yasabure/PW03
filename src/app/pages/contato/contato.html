@@ -1,0 +1,75 @@
+<div class="container">
+
+  <h1>Contato</h1>
+
+  <p class="descricao">
+    <em>Seja bem-vindo! Preencha o <strong>formulário</strong> abaixo para:</em>
+  </p>
+
+  <ul class="motivos">
+    <li>Dúvidas</li>
+    <li>Sugestões</li>
+    <li>Críticas</li>
+    <li>Orçamentos</li>
+  </ul>
+
+  <form>
+
+    <!-- NOME -->
+    <label for="nome">Nome</label>
+    <input
+      id="nome"
+      type="text"
+      name="nome"
+      placeholder="Digite seu nome"
+      required
+      minlength="3"
+    >
+
+    <!-- EMAIL -->
+    <label for="email">Email</label>
+    <input
+      id="email"
+      type="email"
+      name="email"
+      placeholder="Digite seu email"
+      required
+    >
+
+    <!-- TELEFONE -->
+    <label for="telefone">Telefone</label>
+    <input
+      id="telefone"
+      type="tel"
+      name="telefone"
+      placeholder="99999-9999"
+      pattern="[0-9]{5}-[0-9]{4}"
+      required
+    >
+
+    <!-- ASSUNTO -->
+    <label for="assunto">Assunto</label>
+    <select id="assunto" name="assunto">
+
+      <option>Dúvida</option>
+      <option>Sugestão</option>
+      <option>Crítica</option>
+      <option>Orçamento</option>
+
+    </select>
+
+    <!-- MENSAGEM -->
+    <label for="mensagem">Mensagem</label>
+    <textarea
+      id="mensagem"
+      name="mensagem"
+      rows="5"
+      placeholder="Digite sua mensagem"
+      required>
+    </textarea>
+
+    <button type="submit">Enviar</button>
+
+  </form>
+
+</div>

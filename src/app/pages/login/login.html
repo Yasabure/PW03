@@ -1,0 +1,78 @@
+<div class="container">
+
+  <h1>Login</h1>
+
+  <p class="descricao">
+    Acesse sua conta para acompanhar pedidos e finalizar compras com segurança.
+  </p>
+
+  <form>
+
+    <!-- EMAIL -->
+    <label for="email">Email</label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      placeholder="Digite seu email"
+      required
+    >
+
+    <!-- SENHA -->
+    <label for="senha">Senha</label>
+    <input
+      id="senha"
+      name="senha"
+      type="password"
+      placeholder="Digite sua senha"
+      required
+    >
+
+    <button type="submit">Entrar</button>
+
+  </form>
+
+  <div class="links">
+
+    <!-- agora abre o popup -->
+    <a (click)="abrirRecuperacao()">Esqueci minha senha</a>
+
+    <span>|</span>
+
+    <a routerLink="/cadastro">Criar conta</a>
+
+  </div>
+
+</div>
+
+
+<!-- POPUP RECUPERAÇÃO -->
+<div class="modal" *ngIf="mostrarRecuperacao">
+
+  <div class="modal-conteudo">
+
+    <h2>Recuperar Senha</h2>
+
+    <p>Informe seu email ou celular</p>
+
+    <input
+      type="text"
+      placeholder="Email ou celular"
+      [(ngModel)]="contatoRecuperacao"
+    >
+
+    <div class="botoes">
+
+      <button (click)="enviarRecuperacao()">
+        Enviar
+      </button>
+
+      <button class="cancelar" (click)="fecharRecuperacao()">
+        Cancelar
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
