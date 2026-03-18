@@ -11,8 +11,10 @@ import { NgIf } from '@angular/common';
 })
 export class Login {
 
-  mostrarRecuperacao = false;
+  email: string = '';
+  senha: string = '';
 
+  mostrarRecuperacao = false;
   contatoRecuperacao = '';
 
   abrirRecuperacao(){
@@ -24,8 +26,27 @@ export class Login {
   }
 
   enviarRecuperacao(){
-    alert("Link enviado para: " + this.contatoRecuperacao);
+    const cliente = JSON.parse(localStorage.getItem('cliente') || '{}');
+
+    if (cliente.email === this.contatoRecuperacao) {
+      alert("Sua senha é: " + cliente.senha);
+    } else {
+      alert("Email não encontrado");
+    }
+
     this.fecharRecuperacao();
   }
 
+  logar(){
+    const cliente = JSON.parse(localStorage.getItem('cliente') || '{}');
+
+    if (
+      cliente.email === this.email &&
+      cliente.senha === this.senha
+    ) {
+      alert('Login realizado com sucesso!');
+    } else {
+      alert('Email ou senha inválidos');
+    }
+  }
 }

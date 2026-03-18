@@ -6,7 +6,7 @@
     Informe seu email cadastrado para receber o link de redefinição de senha.
   </p>
 
-  <form>
+  <form (ngSubmit)="recuperar()">
 
     <label for="email">Email</label>
 
@@ -16,6 +16,7 @@
       type="email"
       placeholder="Digite seu email"
       required
+      [(ngModel)]="email"
     >
 
     <button type="submit">
@@ -25,9 +26,7 @@
   </form>
 
   <div class="links">
-
     <a routerLink="/login">Voltar para Login</a>
-
   </div>
 
 </div>

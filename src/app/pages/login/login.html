@@ -6,7 +6,7 @@
     Acesse sua conta para acompanhar pedidos e finalizar compras com segurança.
   </p>
 
-  <form>
+  <form (ngSubmit)="logar()">
 
     <!-- EMAIL -->
     <label for="email">Email</label>
@@ -16,6 +16,7 @@
       type="email"
       placeholder="Digite seu email"
       required
+      [(ngModel)]="email"
     >
 
     <!-- SENHA -->
@@ -26,6 +27,7 @@
       type="password"
       placeholder="Digite sua senha"
       required
+      [(ngModel)]="senha"
     >
 
     <button type="submit">Entrar</button>
@@ -34,7 +36,7 @@
 
   <div class="links">
 
-    <!-- agora abre o popup -->
+    <!-- abre o popup -->
     <a (click)="abrirRecuperacao()">Esqueci minha senha</a>
 
     <span>|</span>
@@ -57,6 +59,7 @@
 
     <input
       type="text"
+      name="recuperacao"
       placeholder="Email ou celular"
       [(ngModel)]="contatoRecuperacao"
     >

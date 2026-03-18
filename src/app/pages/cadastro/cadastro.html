@@ -6,7 +6,7 @@
     Crie sua conta para comprar com segurança e acompanhar seus pedidos.
   </p>
 
-  <form>
+  <form (ngSubmit)="salvar()">
 
     <!-- NOME -->
     <label for="nome">Nome</label>
@@ -17,6 +17,7 @@
       placeholder="Digite seu nome completo"
       minlength="3"
       required
+      [(ngModel)]="cliente.nome"
     >
 
     <!-- EMAIL -->
@@ -27,6 +28,7 @@
       type="email"
       placeholder="Digite seu email"
       required
+      [(ngModel)]="cliente.email"
     >
 
     <!-- TELEFONE -->
@@ -38,6 +40,7 @@
       placeholder="99999-9999"
       pattern="[0-9]{5}-[0-9]{4}"
       required
+      [(ngModel)]="cliente.telefone"
     >
 
     <!-- SENHA -->
@@ -49,6 +52,7 @@
       placeholder="Crie uma senha"
       minlength="6"
       required
+      [(ngModel)]="cliente.senha"
     >
 
     <!-- CONFIRMAR SENHA -->
@@ -60,6 +64,7 @@
       placeholder="Digite a senha novamente"
       minlength="6"
       required
+      [(ngModel)]="confirmarSenha"
     >
 
     <button type="submit">Criar Conta</button>
