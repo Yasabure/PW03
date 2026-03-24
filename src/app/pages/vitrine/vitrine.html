@@ -1,56 +1,86 @@
-<div class="container">
+<div class="container vitrine-container">
 
   <h1>Vitrine</h1>
 
-  <!-- BARRA DE PESQUISA -->
-  <div class="barra-pesquisa">
+  <!-- 🔍 BARRA DE PESQUISA -->
+  <div class="barra-pesquisa d-flex gap-2 mb-4">
 
     <input
       type="text"
+      class="form-control"
       placeholder="Pesquisar produto..."
     >
 
-    <button>Pesquisar</button>
+    <button class="btn btn-pesquisar">
+      Pesquisar
+    </button>
 
   </div>
 
+  <!-- 🛍️ PRODUTOS -->
+  <div class="row g-4">
 
-  <div class="produtos">
+    <!-- PRODUTO -->
+    <div class="col-md-3">
+      <div class="produto card h-100">
 
-    <div class="produto">
+        <img src="https://via.placeholder.com/200" class="card-img-top">
 
-      <img src="https://via.placeholder.com/200" alt="Produto">
+        <div class="card-body text-center">
 
-      <h3>Vibrador Rosa</h3>
+          <h5>Vibrador Rosa</h5>
 
-      <p class="preco">R$ 129,90</p>
+          <p class="preco">R$ 129,90</p>
 
-      <button>Adicionar à Cesta</button>
+          <button class="btn btn-add w-100">
+            Adicionar à Cesta
+          </button>
 
+        </div>
+
+      </div>
     </div>
 
-    <div class="produto">
+    <!-- PRODUTO -->
+    <div class="col-md-3">
+      <div class="produto card h-100">
 
-      <img src="https://via.placeholder.com/200" alt="Produto">
+        <img src="https://via.placeholder.com/200" class="card-img-top">
 
-      <h3>Lubrificante Premium</h3>
+        <div class="card-body text-center">
 
-      <p class="preco">R$ 39,90</p>
+          <h5>Lubrificante Premium</h5>
 
-      <button>Adicionar à Cesta</button>
+          <p class="preco">R$ 39,90</p>
 
+          <button class="btn btn-add w-100">
+            Adicionar à Cesta
+          </button>
+
+        </div>
+
+      </div>
     </div>
 
-    <div class="produto">
+    <!-- PRODUTO -->
+    <div class="col-md-3">
+      <div class="produto card h-100">
 
-      <img src="https://via.placeholder.com/200" alt="Produto">
+        <img src="https://via.placeholder.com/200" class="card-img-top">
 
-      <h3>Algemas Sensuais</h3>
+        <div class="card-body text-center">
 
-      <p class="preco">R$ 59,90</p>
+          <h5>Algemas Sensuais</h5>
 
-      <button>Adicionar à Cesta</button>
+          <p class="preco">R$ 59,90</p>
 
+          <button class="btn btn-add w-100">
+            Adicionar à Cesta
+          </button>
+
+        </div>
+
+      </div>
     </div>
 
   </div>

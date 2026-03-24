@@ -1,81 +1,115 @@
-<div class="container">
+<div class="container d-flex justify-content-center align-items-center vh-100">
 
-  <h1>Login</h1>
+  <div class="card shadow p-4" style="width: 400px;">
 
-  <p class="descricao">
-    Acesse sua conta para acompanhar pedidos e finalizar compras com segurança.
-  </p>
+    <h3 class="text-center mb-3">Login</h3>
 
-  <form (ngSubmit)="logar()">
+    <p class="text-muted text-center mb-4">
+      Acesse sua conta para acompanhar pedidos e finalizar compras com segurança.
+    </p>
 
-    <!-- EMAIL -->
-    <label for="email">Email</label>
-    <input
-      id="email"
-      name="email"
-      type="email"
-      placeholder="Digite seu email"
-      required
-      [(ngModel)]="email"
-    >
+    <form (ngSubmit)="logar()">
 
-    <!-- SENHA -->
-    <label for="senha">Senha</label>
-    <input
-      id="senha"
-      name="senha"
-      type="password"
-      placeholder="Digite sua senha"
-      required
-      [(ngModel)]="senha"
-    >
+      <!-- EMAIL -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          class="form-control"
+          placeholder="Digite seu email"
+          required
+          [(ngModel)]="email"
+        >
+      </div>
 
-    <button type="submit">Entrar</button>
+      <!-- SENHA -->
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input
+          id="senha"
+          name="senha"
+          type="password"
+          class="form-control"
+          placeholder="Digite sua senha"
+          required
+          [(ngModel)]="senha"
+        >
+      </div>
 
-  </form>
-
-  <div class="links">
-
-    <!-- abre o popup -->
-    <a (click)="abrirRecuperacao()">Esqueci minha senha</a>
-
-    <span>|</span>
-
-    <a routerLink="/cadastro">Criar conta</a>
-
-  </div>
-
-</div>
-
-
-<!-- POPUP RECUPERAÇÃO -->
-<div class="modal" *ngIf="mostrarRecuperacao">
-
-  <div class="modal-conteudo">
-
-    <h2>Recuperar Senha</h2>
-
-    <p>Informe seu email ou celular</p>
-
-    <input
-      type="text"
-      name="recuperacao"
-      placeholder="Email ou celular"
-      [(ngModel)]="contatoRecuperacao"
-    >
-
-    <div class="botoes">
-
-      <button (click)="enviarRecuperacao()">
-        Enviar
+      <button type="submit" class="btn btn-primary w-100">
+        Entrar
       </button>
 
-      <button class="cancelar" (click)="fecharRecuperacao()">
-        Cancelar
+    </form>
+
+    <div class="text-center mt-3">
+
+      <!-- 🔥 BOTÃO CORRETO -->
+      <button
+        type="button"
+        class="btn btn-link p-0 small"
+        (click)="abrirRecuperacao()"
+      >
+        Esqueci minha senha
       </button>
+
+      <span class="mx-2">|</span>
+
+      <a routerLink="/cadastro" class="small">
+        Criar conta
+      </a>
 
     </div>
 
   </div>
 
+</div>
+
+<!-- 🔥 MODAL -->
+<div class="modal fade show d-block" tabindex="-1" *ngIf="mostrarRecuperacao">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Recuperar Senha</h5>
+        <button
+          type="button"
+          class="btn-close"
+          (click)="fecharRecuperacao()"
+        ></button>
+      </div>
+
+      <div class="modal-body">
+        <p>Informe seu email ou celular</p>
+
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Email ou celular"
+          [(ngModel)]="contatoRecuperacao"
+        >
+      </div>
+
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="fecharRecuperacao()"
+        >
+          Cancelar
+        </button>
+
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="enviarRecuperacao()"
+        >
+          Enviar
+        </button>
+      </div>
+
+    </div>
+  </div>
 </div>

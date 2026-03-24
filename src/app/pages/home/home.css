@@ -1,0 +1,28 @@
+.home-container {
+  max-width: 800px;
+  margin-top: 60px;
+}
+
+/* TÍTULO */
+h1 {
+  color: #ff4da6;
+  font-weight: bold;
+}
+
+/* TEXTO */
+.descricao {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* CARDS */
+.home-card {
+  border-radius: 10px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.home-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}

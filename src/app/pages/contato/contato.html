@@ -1,75 +1,68 @@
-<div class="container">
+<div class="container d-flex justify-content-center">
 
-  <h1>Contato</h1>
+  <div class="contato-container">
 
-  <p class="descricao">
-    <em>Seja bem-vindo! Preencha o <strong>formulário</strong> abaixo para:</em>
-  </p>
+    <h1>Contato</h1>
 
-  <ul class="motivos">
-    <li>Dúvidas</li>
-    <li>Sugestões</li>
-    <li>Críticas</li>
-    <li>Orçamentos</li>
-  </ul>
+    <p class="descricao">
+      <em>Seja bem-vindo! Preencha o <strong>formulário</strong> abaixo para:</em>
+    </p>
 
-  <form>
+    <ul class="motivos">
+      <li>Dúvidas</li>
+      <li>Sugestões</li>
+      <li>Críticas</li>
+      <li>Orçamentos</li>
+    </ul>
 
-    <!-- NOME -->
-    <label for="nome">Nome</label>
-    <input
-      id="nome"
-      type="text"
-      name="nome"
-      placeholder="Digite seu nome"
-      required
-      minlength="3"
-    >
+    <form>
 
-    <!-- EMAIL -->
-    <label for="email">Email</label>
-    <input
-      id="email"
-      type="email"
-      name="email"
-      placeholder="Digite seu email"
-      required
-    >
+      <!-- NOME -->
+      <label for="nome">Nome</label>
+      <input id="nome" type="text" name="nome"
+        placeholder="Digite seu nome"
+        required minlength="3"
+        class="form-control">
 
-    <!-- TELEFONE -->
-    <label for="telefone">Telefone</label>
-    <input
-      id="telefone"
-      type="tel"
-      name="telefone"
-      placeholder="99999-9999"
-      pattern="[0-9]{5}-[0-9]{4}"
-      required
-    >
+      <!-- EMAIL -->
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email"
+        placeholder="Digite seu email"
+        required
+        class="form-control">
 
-    <!-- ASSUNTO -->
-    <label for="assunto">Assunto</label>
-    <select id="assunto" name="assunto">
+      <!-- TELEFONE -->
+      <label for="telefone">Telefone</label>
+      <input id="telefone" type="tel" name="telefone"
+        placeholder="99999-9999"
+        pattern="[0-9]{5}-[0-9]{4}"
+        required
+        class="form-control">
 
-      <option>Dúvida</option>
-      <option>Sugestão</option>
-      <option>Crítica</option>
-      <option>Orçamento</option>
+      <!-- ASSUNTO -->
+      <label for="assunto">Assunto</label>
+      <select id="assunto" name="assunto" class="form-control">
+        <option>Dúvida</option>
+        <option>Sugestão</option>
+        <option>Crítica</option>
+        <option>Orçamento</option>
+      </select>
 
-    </select>
+      <!-- MENSAGEM -->
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem"
+        rows="5"
+        placeholder="Digite sua mensagem"
+        required
+        class="form-control">
+      </textarea>
 
-    <!-- MENSAGEM -->
-    <label for="mensagem">Mensagem</label>
-    <textarea
-      id="mensagem"
-      name="mensagem"
-      rows="5"
-      placeholder="Digite sua mensagem"
-      required>
-    </textarea>
+      <button type="submit" class="btn btn-enviar">
+        Enviar
+      </button>
 
-    <button type="submit">Enviar</button>
+    </form>
 
-  </form>
+  </div>
 
 </div>
